@@ -1,15 +1,16 @@
 # CS410 MP1 -- Getting Familiar with Text
-Due Sept 4, 2022:
+
+Due Sept 10, 2022:
 
 For students who just added the class, **NO LATE PENALTY** will be applied to submissions before Sept 11
 
-In this assignment, you will perform your first text mining analysis with the MeTA toolkit. We will first provide some instructions on setting up and exploring basic functionalities available in MeTA. Details on the graded portion of the assignment can be found at the bottom ("Trying it out on your own!" section)
-
+In this assignment, you will perform your first text mining analysis with the MeTA toolkit. We will first provide some instructions on setting up and exploring basic functionalities available in MeTA. Details on the graded portion of the assignment can be found at the bottom ("Trying it out on your own!" section).
 
 ## Setup
-We'll use [metapy](https://github.com/meta-toolkit/metapy)---Python bindings for MeTA. , use the following commands to get started. 
 
-**Please note that students have had issues using metapy with specific Python versions in the past (e.g. Python 3.7 on mac). To avoid issues, please use Python 2.7 or 3.5. Your code will be tested using Python 3.5** 
+We'll use [metapy](https://github.com/meta-toolkit/metapy)---Python bindings for MeTA. , use the following commands to get started.
+
+**Please note that students have had issues using metapy with specific Python versions in the past (e.g. Python 3.7 on mac). To avoid issues, please use Python 2.7 or 3.5. Your code will be tested using Python 3.5**
 
 ```bash
 # Ensure your pip is up to date
@@ -19,12 +20,14 @@ pip install --upgrade pip
 pip install metapy pytoml
 ```
 
-
 ## Start
+
 Let's start by importing metapy. Open a terminal and type
+
 ```bash
 python
-``` 
+```
+
 to get started
 
 ```python
@@ -34,14 +37,15 @@ import metapy
 metapy.log_to_stderr()
 ```
 
-
 Now, let's create a document with some content to experiment on
+
 ```python
 doc = metapy.index.Document()
 doc.content("I said that I can't believe that it only costs $19.95!")
 ```
 
 ## Tokenization
+
 MeTA provides a stream-based interface for performing document tokenization.
 Each stream starts off with a Tokenizer object, and in most cases you should use the Unicode standard aware ICUTokenizer.
 
